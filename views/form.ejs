@@ -4,14 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Form</title>
   </head>
   <body>
-    <h2>This is your form</h2>
-    <form method="POST" action="/new">
-      <input type="text" placeholder="Name" name="messageUser" />
-      <input type="text" placeholder="Message" name="messageText" />
-      <button type="submit"></button>
-    </form>
+    <div class="main-container">
+      <h2>Write your own message!</h2>
+      <form method="POST" action="/new">
+        <input type="text" placeholder="Name" name="messageUser" />
+        <input
+          type="text"
+          placeholder="Message"
+          name="messageText"
+          class="input-message"
+        />
+        <button type="submit" value="Submit" class="add-btn">
+          Add a new message
+        </button>
+      </form>
+    </div>
   </body>
 </html>

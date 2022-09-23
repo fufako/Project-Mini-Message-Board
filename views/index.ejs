@@ -4,12 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Mini Messageboard</title>
   </head>
   <body>
+    <div class="main-container">
     <h1><%=title %></h1>
+    <a href="new" class="add-new">Add new</a>
     <% for(let i =0; i<messages.length; i++){ %>
-      <p>Name: <%=messages[i].text %> <%=messages[i].user %> </p>
+      <div class="message-container">
+      <p class="message" ><%=messages[i].text %></p>
+      <div class="info-container">
 
+        <p><%=messages[i].user %> </p> <p class="date"> <%=messages[i].added.toLocaleString() %></p>
+      </div>
+      
+    </div>
+      <% } %> 
+
+      
+    </div>
   </body>
 </html>
